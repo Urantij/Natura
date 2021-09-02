@@ -1209,10 +1209,14 @@ public class NContent implements IFuelHandler
         BiomeGenBase[] nether = BiomeDictionary.getBiomesForType(BiomeDictionary.Type.NETHER);
 
         EntityRegistry.addSpawn(ImpEntity.class, 10, 8, 12, EnumCreatureType.creature, nether);
-        EntityRegistry.addSpawn(HeatscarSpider.class, 10, 4, 4, EnumCreatureType.monster, nether);
         EntityRegistry.addSpawn(NitroCreeper.class, 8, 4, 6, EnumCreatureType.monster, nether);
-        EntityRegistry.addSpawn(BabyHeatscarSpider.class, 7, 4, 4, EnumCreatureType.monster, nether);
-
+        
+        if (PHNatura.spawnSpiders)
+        {
+        	EntityRegistry.addSpawn(HeatscarSpider.class, 10, 4, 4, EnumCreatureType.monster, nether);
+        	EntityRegistry.addSpawn(BabyHeatscarSpider.class, 7, 4, 4, EnumCreatureType.monster, nether);
+        }
+        
         BlockDispenser.dispenseBehaviorRegistry.putObject(spawnEgg, new DispenserBehaviorSpawnEgg());
     }
 

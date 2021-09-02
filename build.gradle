@@ -11,7 +11,7 @@ buildscript {
         mavenCentral()
         maven {
             name = 'ForgeFS'
-            url = 'http://files.minecraftforge.net/maven'
+            url = 'https://maven.minecraftforge.net'
         }
 	maven {
             name = "sonatype"
@@ -40,7 +40,7 @@ repositories {
     }
     maven {
         name 'ForgeFS'
-        url 'http://files.minecraftforge.net/maven'
+        url 'https://maven.minecraftforge.net'
     }
 }
 
